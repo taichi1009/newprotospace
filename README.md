@@ -13,7 +13,6 @@
 |:--|:--|
 |id|integer|
 |title|string|
-|text|text|
 |concept|text|
 |catchcopy|text|
 |user_id|references|
@@ -34,7 +33,7 @@
 |email|string|
 |password|string|
 |avatar|string|
-|member_of|string|
+|member|string|
 |profile|text|
 |works|string|
 
@@ -76,6 +75,7 @@
 |column|data_type|
 |:--|:--|
 |id|integer|
-|image|text|
+|main_image|text|
+|sub_image|text|
 |prototype_id|references|
 
