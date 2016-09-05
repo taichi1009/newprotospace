@@ -7,25 +7,25 @@
           %h2 Register
           .user-name_image.row
             .user-name.col-md-10
-              = f.text_field :nickname, placeholder: "Username"
+              = f.text_field :nickname, placeholder: "Username", required: ""
             .user-image.col-md-2
               %button.btn.btn-primary Add image
               = f.file_field :avatar
-          = f.email_field :email, placeholder: "E-Mail", class: "user-email"
+          = f.email_field :email, placeholder: "E-Mail", class: "user-email", required: ""
           = f.password_field :password, placeholder: "Password"
           = f.password_field :password_confirmation, placeholder: "Password_confirmation"
         .col-md-12
           %h4 Member of
           .user-user-member.row
             .user-name.col-md-12
-              = f.text_field :member_of, placeholder: "Member"
+              = f.text_field :member_of, placeholder: "Member", required: ""
           %h4 Profile
           .user-user-profile.row
             .user-name.col-md-12
-              = f.text_area :profile, cols: "30", rows: "4", placeholder: "Profile"
+              = f.text_area :profile, cols: "30", rows: "4", placeholder: "Profile", required: ""
           %h4 Works
           .user-name_image.row
             .user-name.col-md-12
-              = f.text_area :works, cols: "30", rows: "4", placeholder: "Works"
+              = f.text_area :works, cols: "30", rows: "4", placeholder: "Works", required: ""
       .row.text-center.user-btn
         = f.submit :save, class: "btn btn-lg btn-primary btn-block"
