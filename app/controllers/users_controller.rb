@@ -9,10 +9,12 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user.update(user_params)
+    redirect_to user_path, notice: 'ユーザー情報を更新しました。'
   end
 
   private
-  def update_params
+  def user_params
     params.require(:user).permit(:nickname, :avatar, :memeber_of, :profile, :works)
   end
 
